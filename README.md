@@ -16,3 +16,8 @@ Real-time speech-to-text using Whisper (FastAPI backend).
    ```bash
    python -m uvicorn whisperapi:app --host 0.0.0.0 --port 8000
    ```
+
+4. You can test the Whisper-Model if he works well by simply run this command:
+   ```bash
+   curl -X POST -F "file=@input_16khz.wav" http://localhost:8000/transcribe
+   ```
