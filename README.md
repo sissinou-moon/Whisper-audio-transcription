@@ -21,3 +21,18 @@ Real-time speech-to-text using Whisper (FastAPI backend).
    ```bash
    curl -X POST -F "file=@input_16khz.wav" http://localhost:8000/transcribe
    ```
+
+5. You can verify the audio file if it is compatible with the whisper input terms:
+   ```bash
+   python verify_wav.py input_16khz.wav
+   ```
+   you should probably see this:
+   ```
+   INFO: File: input_16khz.wav
+   INFO: Channels: 1
+   INFO: Sample Width: 2 bytes
+   INFO: Sample Rate: 16000 Hz
+   INFO: Frames: 160000
+   INFO: Duration: 10.000 seconds
+   INFO: File is valid WAV
+   ```
